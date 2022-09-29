@@ -8,6 +8,7 @@ import Result from "./pages/Result";
 import Signup from "./pages/Signup";
 import {AuthProvider} from "../contexts/AuthContext"
 
+
 function App() {
   return (
     <Router>
