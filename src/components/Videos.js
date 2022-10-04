@@ -20,7 +20,14 @@ export default function Videos() {
           {videos.map((video) =>
             video.noq > 0 ? (
               <Link
-                to="/quiz" key={video.youtubeID}>
+                to={{
+                  pathname: `/quiz/${video.youtubeID}`,
+                  state: {
+                    videoTitle: video.title,
+                  },
+                }}
+                key={video.youtubeID}
+              >
                 <Video
                   title={video.title}
                   id={video.youtubeID}
