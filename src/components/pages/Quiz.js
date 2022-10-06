@@ -38,7 +38,7 @@ export default function Quiz() {
    const [qna, dispatch] = useReducer(reducer, initialState);
    const { currentUser } = useAuth();
    const navigate = useNavigate();
-   //const { location } = navigate;
+  // const { location } = navigate;
   // const { state } = location;
   // const { videoTitle } = state;
 
@@ -104,7 +104,6 @@ export default function Quiz() {
             <h1>{qna[currentQuestion].title}</h1>
             <h4>Question can have multiple answers</h4>
             <Answers 
-            input
              options={qna[currentQuestion].options}
              handleChange={handleAnswerChange}
              />
